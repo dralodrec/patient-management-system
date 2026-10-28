@@ -57,7 +57,7 @@ public class PatientQueue {
             System.out.println(
                     patient.getPatientId() + " | "
                             + patient.getName() + " | "
-                            + patient.getReasonForVisit() + "\n"
+                            + patient.getReasonForVisit()
             );
 
             current = current.next;
@@ -105,5 +105,19 @@ public class PatientQueue {
         if (newNode.next == null) {
             rear = newNode;
         }
+    }
+
+    public boolean containsPatient(int patientId) {
+        Node current = front;
+
+        while (current != null) {
+            if (current.patient.getPatientId() == patientId) {
+                return true;
+            }
+
+            current = current.next;
+        }
+
+        return false;
     }
 }
