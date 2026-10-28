@@ -1,4 +1,4 @@
-package org.keyin;
+package org.keyin.model;
 
 public class Patient {
     private int patientId;

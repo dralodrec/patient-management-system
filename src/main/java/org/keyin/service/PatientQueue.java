@@ -1,4 +1,6 @@
-package org.keyin;
+package org.keyin.service;
+
+import org.keyin.model.Patient;
 
 public class PatientQueue {
 
@@ -55,7 +57,7 @@ public class PatientQueue {
             System.out.println(
                     patient.getPatientId() + " | "
                             + patient.getName() + " | "
-                            + patient.getReasonForVisit()
+                            + patient.getReasonForVisit() + "\n"
             );
 
             current = current.next;
